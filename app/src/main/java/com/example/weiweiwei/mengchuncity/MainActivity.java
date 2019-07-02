@@ -7,6 +7,9 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    public MainActivity() {
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,9 +22,10 @@ public class MainActivity extends AppCompatActivity {
                 textIntent.putExtra(Intent.EXTRA_TEXT, "这是一段分享的文字");
                 startActivity(Intent.createChooser(textIntent, "分享"));*/
                 Intent i = new Intent();
-                i.setClass(MainActivity.this,Firstpage.class);
+                i.setClass(MainActivity.this,Main2Activity.class);
                 startActivity(i);
             }
         });
     }
+
 }
